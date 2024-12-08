@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flystones</title>
+    <link rel="stylesheet" href="styles.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Apple Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Promo</a></li>
+                <li><a href="#">Testimonio</a></li>
+                <li><a href="#">Modelos</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+          
+            <div class="hero-button-container">
+                <a href="#" class="button">Conoce Más</a>
+            </div>
+        </div>
+    </section>
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Productos</h2>
+        <div class="category-list">
+            <div class="category-item" onclick="filterProducts('all')">Todos</div>
+            <div class="category-item" onclick="filterProducts('cocina')">Cocinas</div>
+            <div class="category-item" onclick="filterProducts('neveras')">Neveras</div>
+            <div class="category-item" onclick="filterProducts('televisor')">Televisores</div>
+            <div class="category-item" onclick="filterProducts('lavadora')">Lavadoras</div>
+            <div class="category-item" onclick="filterProducts('vitrina')">Más</div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="product-section">
+        <div class="product-grid">
+            <div class="product" data-category="cocina" onclick="showProductDetails(this)" 
+                 data-title="cocina" 
+                 data-description="Rendimiento potente para profesionales. Incluye chip M2, hasta 20 horas de batería y una impresionante pantalla Retina."
+                 data-image="img/cocina/cocina1.jpg">
+                <img src="img/cocina/cocina1.jpg" alt="MacBook">
+                <h2>Cocina Ecasa</h2>
+                <p>Cocina Indurama 5 quemadores Roma 30".</p>
+            </div>
+
+            <div class="product" data-category="cocina" onclick="showProductDetails(this)"
+                 data-title="cocina" 
+                 data-description="Creatividad sin límites. Potencia el trabajo y entretenimiento con el nuevo iPad Pro."
+                 data-image="img/cocina/cocina.jpg">
+                <img src="img/cocina/cocina.jpg" alt="iPad">
+                <h2>Cocina Ecasa</h2>
+                <p>Cocina Indurama 5 quemadores Roma 30"</p>
+            </div>
+
+            <div class="product" data-category="cocina" onclick="showProductDetails(this)"
+                 data-title="cocina" 
+                 data-description="Experimenta la innovación en su máxima expresión con el nuevo iPhone 15."
+                 data-image="img/cocina/cocina.jpg">
+                <img src="img/cocina/cocina.jpg" alt="iPhone">
+                <h2>Cocina Ecasa</h2>
+                <p>Cocina Indurama 5 quemadores Roma 30"</p>
+            </div>
+
+            <div class="product" data-category="neveras" onclick="showProductDetails(this)"
+                 data-title="neveras" 
+                 data-description="Tu compañero definitivo para el fitness y la salud."
+                 data-image="img/nevera/149180_1.webp">
+                <img src="img/nevera/149180_1.webp" alt="Watch">
+                <h2>Nevera Indurama</h2>
+                <p>Refrigeradora Manija Frontal 381 Lt Croma | Indurama.</p>
+            </div>
+
+            <div class="product" data-category="neveras" onclick="showProductDetails(this)"
+                 data-title="neveras" 
+                 data-description="Sonido inmersivo para todos. La mejor experiencia de audio."
+                 data-image="img/nevera/157745-1600-1600.webp">
+                <img src="img/nevera/157745-1600-1600.webp" alt="AirPods">
+                <h2>Nevera Indurama</h2>
+                <p>Refrigeradora Manija Frontal 381 Lt Croma | Indurama.</p>
+            </div>
+
+            <div class="product" data-category="neveras" onclick="showProductDetails(this)"
+                 data-title="neveras" 
+                 data-description="Tus shows favoritos, películas y más en la mejor calidad."
+                 data-image="img/nevera/158151-1600-1600.webp">
+                <img src="img/nevera/158151-1600-1600.webp" alt="Apple TV">
+                <h2>Nevera Indurama</h2>
+                <p>Refrigeradora Manija Frontal 381 Lt Croma | Indurama.</p>
+            </div>
+
+
+            <div class="product" data-category="televisor" onclick="showProductDetails(this)"
+            data-title="televisor" 
+            data-description="Tus shows favoritos, películas y más en la mejor calidad."
+            data-image="img/Televisores /143318-1.webp">
+           <img src="img/Televisores /143318-1.webp" alt="Apple TV">
+           <h2>Televisor Smart TV</h2>
+           <p>Televisor Smart TV TCL Android 11 LED 43" 4K UHD 43P635.</p>
+       </div>
+
+
+       <div class="product" data-category="televisor" onclick="showProductDetails(this)"
+       data-title="televisor" 
+       data-description="Tus shows favoritos, películas y más en la mejor calidad."
+       data-image="img/Televisores /148931.webp">
+      <img src="img/Televisores /148931.webp" alt="Apple TV">
+      <h2>Televisor Smart TV</h2>
+      <p>Televisor Smart TV TCL Android 11 LED 43" 4K UHD 43P635</p>
+  </div>
+
+  <div class="product" data-category="televisor" onclick="showProductDetails(this)"
+  data-title="televisor" 
+  data-description="Tus shows favoritos, películas y más en la mejor calidad."
+  data-image="img/Televisores /149099_1.webp">
+ <img src="img/Televisores /149099_1.webp" alt="Apple TV">
+ <h2>Televisor Smart TV</h2>
+ <p>Televisor Smart TV TCL Android 11 LED 43" 4K UHD 43P635</p>
+</div>
+
+
+
+
+       <div class="product" data-category="lavadora" onclick="showProductDetails(this)"
+       data-title="lavadora" 
+       data-description="Tus shows favoritos, películas y más en la mejor calidad."
+       data-image="img/Lavadora/000005000001035272-1200-1.webp">
+      <img src="img/Lavadora/000005000001035272-1200-1.webp" alt="Apple TV">
+      <h2>Lavadora Superior </h2>
+      <p>Lavadora Superior 16 Kg EWIX16F6ESG.</p>
+  </div>
+
+  <div class="product" data-category="lavadora" onclick="showProductDetails(this)"
+  data-title="lavadora" 
+  data-description="Tus shows favoritos, películas y más en la mejor calidad."
+  data-image="img/Lavadora/134642_1_xaksev4fd6xpxsrq.webp">
+ <img src="img/Lavadora/134642_1_xaksev4fd6xpxsrq.webp" alt="Apple TV">
+ <h2>Lavadora Superior </h2>
+ <p>Lavadora Superior 16 Kg EWIX16F6ESG.</p>
+</div>
+
+<div class="product" data-category="lavadora" onclick="showProductDetails(this)"
+data-title="lavadora" 
+data-description="Tus shows favoritos, películas y más en la mejor calidad."
+data-image="img/Lavadora/148622-1.webp">
+<img src="img/Lavadora/148622-1.webp" alt="Apple TV">
+<h2>Lavadora Superior </h2>
+<p>Lavadora Superior 16 Kg EWIX16F6ESG.</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="product" data-category="neveras" onclick="showProductDetails(this)"
+data-title="neveras" 
+data-description="Tus shows favoritos, películas y más en la mejor calidad."
+data-image="img/Vitrinas/197226-1200-auto.webp">
+<img src="img/Vitrinas/197226-1200-auto.webp" alt="Apple TV">
+<h2>Vitrina Indurama</h2>
+<p>Refrigerador Side by Side con tecnología Xpert Inverter.</p>
+</div>
+
+<div class="product" data-category="neveras" onclick="showProductDetails(this)"
+data-title="neveras" 
+data-description="Tus shows favoritos, películas y más en la mejor calidad."
+data-image="img/Vitrinas/197243-1200-auto.webp">
+<img src="img/Vitrinas/197243-1200-auto.webp" alt="Apple TV">
+<h2>Vitrina Indurama</h2>
+<p>Vitrina Indurama Vertical 380 L VFV 520.</p>
+</div>
+
+<div class="product" data-category="neveras" onclick="showProductDetails(this)"
+data-title="neveras" 
+data-description="Tus shows favoritos, películas y más en la mejor calidad."
+data-image="img/Vitrinas/197364-1200-auto.webp">
+<img src="img/Vitrinas/197364-1200-auto.webp" alt="Apple TV">
+<h2>Vitrina Indurama</h2>
+<p>Vitrina Indurama Vertical 380 L VFV 520.</p>
+</div>
+<div class="product" data-category="neveras" onclick="showProductDetails(this)"
+data-title="neveras" 
+data-description="Tus shows favoritos, películas y más en la mejor calidad."
+data-image="img/Vitrinas/197364-1200-auto.webp">
+<img src="img/Vitrinas/197364-1200-auto.webp" alt="Apple TV">
+<h2>Nevera Indurama</h2>
+<p>Vitrina Indurama Vertical 380 L VFV 520.</p>
+</div>
+
+
+
+
+       
+    </div>
+
+        
+    </section>
+
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" src="" alt="Imagen del Producto">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <a id="whatsappButton" href="" target="_blank" class="button whatsapp-button">
+                Cotizar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Slider de promociones -->
+    <div class="slider-promo-container">
+        <div class="slider-promo">
+          <!-- General de la tienda -->
+          <div class="slider-promo-item">
+            <img src="img/Promo/1.svg" alt="Entrega rápida">
+            <h3>Compra con confianza</h3>
+            <p>Entrega en dos horas, gratuita o recogida fácil en tienda.</p>
+          </div>
+          
+          <!-- Generadores de energía -->
+          <div class="slider-promo-item">
+            <img src="img/Promo/6.svg" alt="Generadores de energía">
+            <h3>Generadores de energía para cualquier necesidad</h3>
+            <p>Encuentra el generador ideal para tu hogar o trabajo. Opciones de personalización y entrega rápida.</p>
+          </div>
+          
+          <!-- Vitrinas -->
+          <div class="slider-promo-item">
+            <img src="img/Promo/3.svg" alt="Vitrinas">
+            <h3>Vitrinas para tu espacio</h3>
+            <p>Encuentra vitrinas de diseño único, perfectas para tu hogar o negocio. Entrega gratuita disponible.</p>
+          </div>
+          
+          <!-- Neveras -->
+          <div class="slider-promo-item">
+            <img src="img/Promo/4.svg" alt="Neveras">
+            <h3>Neveras de última tecnología</h3>
+            <p>Disfruta de neveras eficientes, con opciones de pago cómodas y entrega rápida.</p>
+          </div>
+          
+          <!-- Televisores -->
+          <div class="slider-promo-item">
+            <img src="img/Promo/5.svg" alt="Televisores">
+            <h3>Televisores de alta definición</h3>
+            <p>Explora nuestra selección de televisores con imagen de calidad superior. ¡Hazlos tuyos ahora!</p>
+          </div>
+        </div>
+      
+      
+
+        <!-- Controles del slider -->
+        <div class="slider-promo-controls">
+            <button class="prev">←</button>
+            <button class="next">→</button>
+        </div>
+    </div>
+
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="testimonial-grid">
+            <!-- Testimonio 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="img/Clientes/D4FF903A-DD4D-46A9-B7E0-D52F4312D0F1.JPG" alt="Cliente" class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h3>Ana Martínez</h3>
+                        <p>Cocina</p>
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">"La calidad de la cocina es increíble. El servicio de entrega fue rápido y el equipo muy profesional. Definitivamente la mejor decisión de compra que he hecho."</p>
+                <div class="testimonial-date">Hace 2 días</div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="img/Clientes/D4FF903A-DD4D-46A9-B7E0-D52F4312D0F1.JPG" alt="Cliente" class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h3>Carlos Ruiz</h3>
+                        <p>Televisor</p>
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">"Excelente rendimiento para mi trabajo. El soporte post-venta es excepcional. ¡100% recomendado!"</p>
+                <div class="testimonial-date">Hace 1 semana</div>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <img src="img/Clientes/D4FF903A-DD4D-46A9-B7E0-D52F4312D0F1.JPG" alt="Cliente" class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h3>Laura Sánchez</h3>
+                        <p>Nevera</p>
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-quote">"Perfecto para mi trabajo. La pantalla es espectacular. El servicio de la mejor calidad."</p>
+                <div class="testimonial-date">Hace 5 días</div>
+            </div>
+        </div>
+    </section>
+
+<!-- Product Comparison Section -->
+<section class="comparison">
+    <h2>Compara los modelos</h2>
+    
+    <!-- Add tab buttons -->
+    <div class="comparison-tabs">
+        <button class="tab-btn active" data-category="iphone">Cocinas</button>
+        <button class="tab-btn" data-category="macbook">Neveras</button>
+        <button class="tab-btn" data-category="ipad">Vitrinas</button>
+    </div>
+    
+    <!-- cocina comparison grid -->
+    <div class="comparison-grid" id="iphone">
+        <div class="comparison-item">
+            <span class="price-tag">Desde $799</span>
+            <img src="img/cocina/cocina.jpg" alt="iPhone 15">
+            <h3>COCINA</h3>
+            <ul class="specs-list">
+                <li>Vitrina VFV 520 de Indurama con vidrio panorámico</li>
+                <li>desempañador y luz Led interior</li>
+                <li>control de temperatura</li>
+                <li>parrillas anticorrosivas super reforzadas y regulables.</li>
+            </ul>
+            </ul>
+        
+        </div>
+
+        <div class="comparison-item featured">
+            <span class="featured-label">Recomendado</span>
+            <span class="price-tag">Desde $999</span>
+            <img src="img/cocina/cocina1.jpg" alt="iPhone 15 Pro">
+            <h3>COCINA</h3>
+            <ul class="specs-list">
+                <li>Vitrina VFV 520 de Indurama con vidrio panorámico</li>
+                <li>desempañador y luz Led interior</li>
+                <li>control de temperatura</li>
+                <li>parrillas anticorrosivas super reforzadas y regulables.</li>
+            </ul>
+            </ul>
+        </div>
+
+        <div class="comparison-item">
+            <span class="price-tag">Desde $1199</span>
+            <img src="img/cocina/cocina2.jpg" alt="iPhone 15 Pro Max">
+            <h3>COCINA</h3>
+            <ul class="specs-list">
+                <li>Vitrina VFV 520 de Indurama con vidrio panorámico</li>
+                <li>desempañador y luz Led interior</li>
+                <li>control de temperatura</li>
+                <li>parrillas anticorrosivas super reforzadas y regulables.</li>
+            </ul>
+            </ul>
+        </div>
+    </div>
+
+    <!-- nevera comparison grid -->
+    <div class="comparison-grid" id="macbook" style="display: none;">
+        <div class="comparison-item">
+            <span class="price-tag">Desde $999</span>
+            <img src="img/nevera/149180_1.webp" alt="MacBook Air">
+            <h3>NEVERA</h3>
+            <ul class="specs-list">
+                <li>Vitrina VFV 520 de Indurama con vidrio panorámico</li>
+                <li>desempañador y luz Led interior</li>
+                <li>control de temperatura</li>
+                <li>parrillas anticorrosivas super reforzadas y regulables.</li>
+            </ul>
+            </ul>
+        </div>
+
+        <div class="comparison-item featured">
+            <span class="featured-label">Recomendado</span>
+            <span class="price-tag">Desde $1499</span>
+            <img src="img/nevera/157745-1600-1600.webp" alt="MacBook Pro 14">
+            <h3>NEVERA</h3>
+            <ul class="specs-list">
+                <li>Vitrina VFV 520 de Indurama con vidrio panorámico</li>
+                <li>desempañador y luz Led interior</li>
+                <li>control de temperatura</li>
+                <li>parrillas anticorrosivas super reforzadas y regulables.</li>
+            </ul>
+            </ul>
+        </div>
+
+        <div class="comparison-item">
+            <span class="price-tag">Desde $2499</span>
+            <img src="img/nevera/158151-1600-1600.webp" alt="MacBook Pro 16">
+            <h3>NEVERA</h3>
+            <ul class="specs-list">
+                <li>Vitrina VFV 520 de Indurama con vidrio panorámico</li>
+                <li>desempañador y luz Led interior</li>
+                <li>control de temperatura</li>
+                <li>parrillas anticorrosivas super reforzadas y regulables.</li>
+            </ul>
+            </ul>
+        </div>
+    </div>
+
+    <!-- vitrina comparison grid -->
+    <div class="comparison-grid" id="ipad" style="display: none;">
+        <div class="comparison-item">
+            <span class="price-tag">Desde $449</span>
+            <img src="img/Vitrinas/197226-1200-auto.webp" alt="iPad">
+            <h3>VITRINA</h3>
+            <ul class="specs-list">
+                
+                <li>Vitrina VFV 520 de Indurama con vidrio panorámico</li>
+                <li>desempañador y luz Led interior</li>
+                <li>control de temperatura</li>
+                <li>parrillas anticorrosivas super reforzadas y regulables.</li>
+            </ul>
+        </div>
+
+        <div class="comparison-item featured">
+            <span class="featured-label">Recomendado</span>
+            <span class="price-tag">Desde $799</span>
+            <img src="img/Vitrinas/197243-1200-auto.webp" alt="iPad Air">
+            <h3>VITRINA</h3>
+            <ul class="specs-list">
+                <li>Vitrina VFV 520 de Indurama con vidrio panorámico</li>
+                <li>desempañador y luz Led interior</li>
+                <li>control de temperatura</li>
+                <li>parrillas anticorrosivas super reforzadas y regulables.</li>
+            </ul>
+            </ul>
+        </div>
+
+        <div class="comparison-item">
+            <span class="price-tag">Desde $1099</span>
+            <img src="img/Vitrinas/197364-1200-auto.webp" alt="iPad Pro">
+            <h3>VITRINA</h3>
+            <ul class="specs-list">
+                <li>Vitrina VFV 520 de Indurama con vidrio panorámico</li>
+                <li>desempañador y luz Led interior</li>
+                <li>control de temperatura</li>
+                <li>parrillas anticorrosivas super reforzadas y regulables.</li>
+            </ul>
+            </ul>
+        </div>
+    </div>
+</section><!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="newsletter-content">
+        <h2>Mantente actualizado</h2>
+        <p>Suscríbete para recibir las últimas novedades y ofertas especiales</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Tu correo electrónico" class="newsletter-input" required>
+            <button type="submit" class="newsletter-button">Suscribirse</button>
+        </form>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#">Generadores de Energía</a></li>
+                    <li><a href="#">Vitrinas</a></li>
+                    <li><a href="#">Neveras</a></li>
+                    <li><a href="#">Televisores</a></li>
+                    <li><a href="#">Cocinas</a></li>
+                    <li><a href="#">Lavadoras</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="#">Envío Rápido</a></li>
+                    <li><a href="#">Pago en Cuotas</a></li>
+                    <li><a href="#">Soporte Técnico</a></li>
+                    <li><a href="#">Garantía Extendida</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Redes</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Tiktok</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 Flystone. Todos los derechos reservados.</p>
+    </footer>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
